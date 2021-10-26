@@ -1,6 +1,6 @@
 # Calendars for Physique Magnifique
 
-See main website [here](https://www.physiquemagnifique.com/).
+See gym website [here](https://www.physiquemagnifique.com/).
 
 # Developer
 

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import FullCalendar from '@fullcalendar/react' // must go before plugins
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// a plugin!
+import timeGridPlugin from '@fullcalendar/timegrid'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import googleCalendarPlugin from '@fullcalendar/google-calendar';
+
+const API_KEY = process.env.GOOGLE_CALENDAR_API_KEY
+const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <FullCalendar
+        plugins={[ timeGridPlugin, dayGridPlugin, googleCalendarPlugin ]}
+        googleCalendarApiKey={API_KEY}
+        events={{
+          googleCalendarId: {CALENDAR_ID}
+        }}
+        initialView="timeGridWeek"
+        headerToolbar={{
+          start: 'prev today', // will normally be on the left. if RTL, will be on the right
+          center: 'title',
+          end: 'timeGridDay,timeGridWeek,dayGridMonth next' // will normally be on the right. if RTL, will be on the left
+        }}
+
+      />
+    )
+  }
 }
-
-export default App;

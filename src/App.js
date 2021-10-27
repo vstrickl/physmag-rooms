@@ -14,8 +14,8 @@ export default class App extends React.Component {
     return (
     <div className="container">
       <div className="row mt-3 mb-5">
-        <h4>Physique Magnifique Calendar</h4>
-        <h2>Yoga Studio</h2>
+        <h4>Physique Magnifique</h4>
+        <h2>Yoga Studio Calendar</h2>
       </div>
       
       <FullCalendar

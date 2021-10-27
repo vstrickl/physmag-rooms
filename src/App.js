@@ -12,6 +12,9 @@ const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID
 export default class App extends React.Component {
   render() {
     return (
+    <>
+      <h3>Physique Magnifique Calendar</h3>
+      <h2>Yoga Studio</h2>
       <FullCalendar
         plugins={[ timeGridPlugin, dayGridPlugin, googleCalendarPlugin ]}
         googleCalendarApiKey={API_KEY}
@@ -20,12 +23,13 @@ export default class App extends React.Component {
         }}
         initialView="timeGridWeek"
         headerToolbar={{
-          start: 'prev today', // will normally be on the left. if RTL, will be on the right
+          start: 'prev', // will normally be on the left. if RTL, will be on the right
           center: 'title',
-          end: 'timeGridDay,timeGridWeek,dayGridMonth next' // will normally be on the right. if RTL, will be on the left
+          end: 'today timeGridDay,timeGridWeek,dayGridMonth next' // will normally be on the right. if RTL, will be on the left
         }}
 
       />
+    </>
     )
   }
 }

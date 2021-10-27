@@ -6,8 +6,8 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
-const API_KEY = process.env.GOOGLE_CALENDAR_API_KEY
-const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID
+const API_KEY = process.env.REACT_APP_API_KEY
+const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID
 
 export default class App extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class App extends React.Component {
         plugins={[ timeGridPlugin, dayGridPlugin, googleCalendarPlugin ]}
         googleCalendarApiKey={API_KEY}
         events={{
-          googleCalendarId: {CALENDAR_ID}
+          googleCalendarId: CALENDAR_ID
         }}
         initialView="timeGridWeek"
         headerToolbar={{

@@ -25,6 +25,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Physique Magnifique</title>
+
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 3px !important;
+        background-color: transparent;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: none !important;
+        background-color: transparent;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+      </style>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +64,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      //  Listen: Display scrolling bar when the user scrolls
+      window.addEventListener('scroll', this.handleScroll, true);
+
+      // Add to "fc-scroller"classes to related scrolling entity
+      handleScroll = (e) => {
+        if (e.target.classList.contains("fc-scroller") === false) {
+          e.target.classList.add("fc-scroller");
+        }
+      }
+    </script>
   </body>
 </html>

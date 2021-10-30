@@ -46,6 +46,10 @@ a {
   .fc .fc-toolbar-title {
     font-size: 1em;
   }
+
+  .fc table {
+    font-size: .75em;
+  }
 }
 
 /* Scrollbar Style */
@@ -54,7 +58,7 @@ a {
     -ms-overflow-style: none; /* IE 10+ */
   }
 
-  .fc-scroller{
+  .fc-scroller {
     scrollbar-width: thin; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
   }

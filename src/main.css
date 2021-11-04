@@ -84,12 +84,10 @@ a {
     height: 550px;
   }
 
-  @media (max-width: 544px) {
-    .fc .fc-view-harness {
-      flex-grow: 1;
-      position: relative;
-      height: 525px;
-    }
+  .fc .fc-view-harness {
+    flex-grow: 1;
+    position: relative;
+    height: 72vh;
   }
 
   /* Button & Navigation Row */

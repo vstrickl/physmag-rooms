@@ -44,7 +44,7 @@ a {
 /* Text */
 @media (max-width: 544px) {
   .fc .fc-toolbar-title {
-    font-size: 1em;
+    font-size: .85em;
   }
 
   .fc table {
@@ -74,4 +74,32 @@ a {
   
   .fc-scroller::-webkit-scrollbar-thumb {
     background-color: #acacac;
+  }
+
+  /* Container Size */
+
+  .fc .fc-view-harness {
+    flex-grow: 1;
+    position: relative;
+    height: 550px;
+  }
+
+  @media (max-width: 544px) {
+    .fc .fc-view-harness {
+      flex-grow: 1;
+      position: relative;
+      height: 525px;
+    }
+  }
+
+  /* Button & Navigation Row */
+
+  @media (max-width: 544px) {
+    .fc .fc-button {
+      font-size: .5em;
+    }
+
+    .fc .fc-toolbar-title {
+      margin: 0 8px;
+    }
   }

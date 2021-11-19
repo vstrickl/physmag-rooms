@@ -10,7 +10,8 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar'
 import './main.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY
-const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID
+const CALENDAR_ID_1 = process.env.REACT_APP_CALENDAR_ID_1
+const CALENDAR_ID_2 = process.env.REACT_APP_CALENDAR_ID_2
 
 export default class App extends React.Component {
   render() {
@@ -24,9 +25,15 @@ export default class App extends React.Component {
       <FullCalendar
         plugins={[ timeGridPlugin, dayGridPlugin, googleCalendarPlugin ]}
         googleCalendarApiKey={API_KEY}
-        events={{
-          googleCalendarId: CALENDAR_ID
-        }}
+        eventSources={ [
+          {
+            googleCalendarId: CALENDAR_ID_1
+          },
+          {
+            googleCalendarId: CALENDAR_ID_2,
+            className: 'private-workout'
+          }
+        ]}
         initialView='timeGridWeek'
         themeSystem='standard'
         headerToolbar={{
